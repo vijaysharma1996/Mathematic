@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+void pallindrome(int n){
+        int temp=n,remainder,rev=0;
+        while(temp!=0)
+        {
+            remainder=temp%10;
+            rev=rev*10+remainder;
+            temp=temp/10;
+          
+        }
+          if (rev==n)
+            cout<<"hai";
+            else
+            cout<<"nhi hai";
+}
+
+int main (){
+    pallindrome(3963);
+return 0;
+}       
