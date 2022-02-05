@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+int count=0;
+int countDigit(int n){
+    }
+
+
+while(n!=0)
+    {
+        n/=10;
+        ++count;
+    }
+    return count;
+}
+int main()
+{
+    int n;
+    cin>>n;
+int c=countDigit(n);
+cout<<c;
+    return 0;
+}
+
+
+Optimised:
+
+#include <iostream>
+
+using namespace std;
+int count=0;
+int countDigit(int n){
+    if(n==0)
+    return 0;
+    else
+    return 1+countDigit(n-1);
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int c=countDigit(n);
+    cout<<c;
+    return 0;
+}
